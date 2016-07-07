@@ -1,0 +1,94 @@
+﻿
+<style>
+    input[type=file] {
+        height: 300px;
+        width: 100%;
+    }
+
+    .uploaded-img-container {
+        position: absolute;
+        top: 70px;
+        left: 0px;
+    }
+
+    .uploaded-img {
+        max-height: 250px;
+        width: 87%;
+        border-color: white;
+        border-style: solid;
+        border-width: 5px;
+        margin-left: 20px;
+    }
+
+    .gallery-container {
+        height: 300px;
+        width: 500px;
+        text-align: center;
+        background-color: dimgrey;
+        position: relative;
+    }
+
+    /*__________*/
+    .container {
+        width: 600px;
+        border: 1px solid #CCC;
+        box-shadow: 0 1px 5px #CCC;
+        border-radius: 5px;
+        font-family: verdana;
+        margin: 25px auto;
+        position: relative;
+    }
+
+        .container header  {
+            background: #f1f1f1;
+            background-image: -webkit-linear-gradient( top, #f1f1f1, #CCC );
+            background-image: -ms-linear-gradient( top, #f1f1f1, #CCC );
+            background-image: -moz-linear-gradient( top, #f1f1f1, #CCC );
+            background-image: -o-linear-gradient( top, #f1f1f1, #CCC );
+            box-shadow: 0 1px 2px #888;
+            padding: 10px;
+        }
+          .container footer  {
+            background: #f1f1f1;
+            background-image: -webkit-linear-gradient( top, #f1f1f1, #CCC );
+            background-image: -ms-linear-gradient( top, #f1f1f1, #CCC );
+            background-image: -moz-linear-gradient( top, #f1f1f1, #CCC );
+            background-image: -o-linear-gradient( top, #f1f1f1, #CCC );
+            box-shadow: 0 1px 2px #888;
+            padding: 10px;
+        }
+
+        .container h1 {
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            font-weight: normal;
+            text-shadow: 0 1px 2px white;
+            color: #888;
+            text-align: center;
+        }
+
+        .container section {
+            padding: 10px 30px;
+            font-size: 12px;
+            line-height: 175%;
+            color: #333;
+        }
+
+   
+</style>
+
+<div class="container">
+    <header><h1>Upload Or Drag Image Here</h1></header>
+    <div>
+        <div class="dropzone" file-dropzone="[image/png, image/jpeg, image/gif]"
+             file="image" file-name="imageFileName" data-max-file-size="3">
+        </div>
+    </div>
+
+    <form>
+        <input type="file" fileread="uploadme.src">
+        <span class="uploaded-img-container" ng-show="imgUrl"><span><img draggable="true" class="uploaded-img" ng-src="{{imgUrl}}" /></span></span>
+    </form>
+    <footer>  <input type="button" value="Send To Server" ng-click="sendToServer()" /></footer>
+</div>

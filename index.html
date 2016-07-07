@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>    
+</head>
+<body>
+
+    <div ng-app="myApp">
+        <!--Add following tag-->
+        <img-gallery></img-gallery>
+    </div>
+
+
+    <!--Your angular app-->
+    <script>
+        var app = angular.module('myApp', []);       
+    </script>
+
+    <!--Directive Js-->
+    <script src="directive/dragableImageGallery.js"></script>
+</body>
+</html>
