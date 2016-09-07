@@ -1,6 +1,6 @@
 ﻿app.directive('imgGallery', function () {
     return {
-        templateUrl: 'directive/gallery.html',
+        templateUrl:'http://gog1withme.6te.net/AngPicture/directive/gallery.html' //'directive/gallery.html',
         restrict: 'E',
         controller: ['$scope', function ($scope) {            
             $scope.imgUrlObj = [];
